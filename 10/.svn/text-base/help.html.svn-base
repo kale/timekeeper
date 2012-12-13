@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>TimeKeeper Help</title>
+    <link rel="stylesheet" type="text/css" href="css/StyleSheet.css" />
+</head>
+<body id="help">
+        <h4>
+            Overview</h4>
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer fringilla dapibus
+            pede. Duis dignissim ultricies lectus. Etiam at diam. Proin a lacus. Donec sem arcu,
+            feugiat eget, vulputate vitae, mollis a, lorem. Curabitur at leo. Morbi nunc. Suspendisse
+            eu magna. Pellentesque rhoncus ipsum nec lacus. Lorem ipsum dolor sit amet, consectetuer
+            adipiscing elit. Maecenas sapien tortor, gravida ac, euismod a, posuere eget, mi.
+            Donec varius ligula ac dui. Praesent at urna. Suspendisse laoreet elit eget mauris.
+            Nulla facilisi. Etiam cursus. Etiam ac nulla. Nulla scelerisque facilisis quam.
+            Fusce placerat cursus nisl. Vivamus sit amet purus sed orci egestas gravida.</p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer fringilla dapibus
+            pede. Duis dignissim ultricies lectus. Etiam at diam. Proin a lacus. Donec sem arcu,
+            feugiat eget, vulputate vitae, mollis a, lorem. Curabitur at leo. Morbi nunc. Suspendisse
+            eu magna. Pellentesque rhoncus ipsum nec lacus. Lorem ipsum dolor sit amet, consectetuer
+            adipiscing elit. Maecenas sapien tortor, gravida ac, euismod a, posuere eget, mi.
+            Donec varius ligula ac dui. Praesent at urna. Suspendisse laoreet elit eget mauris.
+            Nulla facilisi. Etiam cursus. Etiam ac nulla. Nulla scelerisque facilisis quam.
+            Fusce placerat cursus nisl. Vivamus sit amet purus sed orci egestas gravida.</p>
+</body>
+</html>

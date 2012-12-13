@@ -1,0 +1,54 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="MasterPage" %>
+<%@ Register TagPrefix="smartduck" TagName="LoadTime" Src="LoadTime.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>TimeKeeper</title>
+    <link rel="stylesheet" type="text/css" href="css/StyleSheet.css" />
+</head>
+<body>
+    <div id="mainbody">
+        <form id="form1" runat="server">
+            <div id="beta">
+            </div>
+            <div id="header">
+                <div id="title">
+                    <h2>
+                        Company Name
+                    </h2>
+                    <br />
+                    <h1>
+                        <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Default.aspx" runat="server">TimeKeeper</asp:HyperLink>
+                    </h1>
+                </div>
+            </div>
+            <div class="username">
+                <asp:Label ID="WelcomeLabel" runat="server" /><br />
+                <asp:HyperLink ID="MySettingsHyperLink" runat="server" NavigateUrl="~/10/MySettings.aspx">My Settings</asp:HyperLink>
+                |
+                <asp:HyperLink ID="HelpHyperLink" runat="server" NavigateUrl="~/10/Help.aspx">Help</asp:HyperLink>
+            </div>
+            <div class="menu">
+                <asp:Menu ID="MainMenu" runat="server" DataSourceID="SiteMapDataSource" Orientation="Horizontal"
+                    StaticDisplayLevels="2">
+                    <DynamicMenuStyle BackColor="LightGray" BorderColor="Silver" BorderStyle="Double" />
+                </asp:Menu>
+            </div>
+            <div class="submenu">
+                <!-- sub navigation items can go in this div here -->
+            </div>
+            <div id="body">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="footer">
+                <smartduck:LoadTime ID="LoadTime" runat="server" />
+                |
+                <asp:HyperLink ID="ChangeLogHyperLink" runat="server" NavigateUrl="~/10/ChangeLog.aspx">ChangeLog</asp:HyperLink>
+            </div>
+            &nbsp;
+            <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" />
+        </form>
+    </div>
+</body>
+</html>

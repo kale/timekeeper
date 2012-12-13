@@ -1,0 +1,13 @@
+<%@ Page Language="C#" MasterPageFile="~/10/Site.master" AutoEventWireup="true" CodeFile="Help.aspx.cs"
+    Inherits="Help" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="Server">
+    <div id="fullview">
+        <h2>
+            Help</h2>
+        <p>
+            Welcome to the help page for TimeKeeper.
+        </p>
+        <iframe id="frame1" src="help.html" scrolling="auto" frameborder="0" height="2200px" width="95%"></iframe>
+    </div>
+</asp:Content>

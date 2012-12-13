@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="TimeKeeperDataSource">
+      <DataSourceReference>TimeKeeperDataSource</DataSourceReference>
+      <rd:DataSourceID>0758d325-b530-4af2-b3e5-27b3a1d6af25</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>0.5in</BottomMargin>
+  <RightMargin>0.5in</RightMargin>
+  <ReportParameters>
+    <ReportParameter Name="recent">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>=DateAdd("ww",-1,Today())</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Time worked since:</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <ZIndex>1</ZIndex>
+        <Width>5in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Tahoma</FontFamily>
+          <FontWeight>700</FontWeight>
+          <FontSize>20pt</FontSize>
+          <Color>SteelBlue</Color>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.36in</Height>
+        <Value>Project Matrix</Value>
+      </Textbox>
+      <Matrix Name="matrix1">
+        <MatrixColumns>
+          <MatrixColumn>
+            <Width>1.375in</Width>
+          </MatrixColumn>
+        </MatrixColumns>
+        <RowGroupings>
+          <RowGrouping>
+            <Width>2.125in</Width>
+            <DynamicRows>
+              <ReportItems>
+                <Textbox Name="ProjectName">
+                  <rd:DefaultName>ProjectName</rd:DefaultName>
+                  <ZIndex>1</ZIndex>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <FontFamily>Tahoma</FontFamily>
+                    <FontWeight>700</FontWeight>
+                    <BorderColor>
+                      <Default>LightGrey</Default>
+                    </BorderColor>
+                    <BackgroundColor>#6e9eca</BackgroundColor>
+                    <Color>White</Color>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!ProjectName.Value</Value>
+                </Textbox>
+              </ReportItems>
+              <Sorting>
+                <SortBy>
+                  <SortExpression>=Fields!ProjectName.Value</SortExpression>
+                  <Direction>Ascending</Direction>
+                </SortBy>
+              </Sorting>
+              <Grouping Name="matrix1_ProjectName">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!ProjectName.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+            </DynamicRows>
+          </RowGrouping>
+        </RowGroupings>
+        <ColumnGroupings>
+          <ColumnGrouping>
+            <DynamicColumns>
+              <ReportItems>
+                <Textbox Name="PhaseName">
+                  <CanShrink>true</CanShrink>
+                  <rd:DefaultName>PhaseName</rd:DefaultName>
+                  <ZIndex>3</ZIndex>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <FontFamily>Tahoma</FontFamily>
+                    <FontWeight>700</FontWeight>
+                    <BorderColor>
+                      <Default>LightGrey</Default>
+                    </BorderColor>
+                    <BackgroundColor>#6e9eca</BackgroundColor>
+                    <Color>White</Color>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!PhaseName.Value</Value>
+                </Textbox>
+              </ReportItems>
+              <Sorting>
+                <SortBy>
+                  <SortExpression>=Fields!PhaseName.Value</SortExpression>
+                  <Direction>Ascending</Direction>
+                </SortBy>
+              </Sorting>
+              <Grouping Name="matrix1_PhaseName">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!PhaseName.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+            </DynamicColumns>
+            <Height>0.21in</Height>
+          </ColumnGrouping>
+          <ColumnGrouping>
+            <Height>0.21in</Height>
+            <StaticColumns>
+              <StaticColumn>
+                <ReportItems>
+                  <Textbox Name="textbox6">
+                    <rd:DefaultName>textbox6</rd:DefaultName>
+                    <ZIndex>2</ZIndex>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <TextAlign>Right</TextAlign>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontWeight>700</FontWeight>
+                      <BorderColor>
+                        <Default>LightGrey</Default>
+                      </BorderColor>
+                      <BackgroundColor>SlateGray</BackgroundColor>
+                      <Color>White</Color>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>Total Time</Value>
+                  </Textbox>
+                </ReportItems>
+              </StaticColumn>
+            </StaticColumns>
+          </ColumnGrouping>
+        </ColumnGroupings>
+        <DataSetName>TimeKeeperDataSource</DataSetName>
+        <Top>0.36in</Top>
+        <Width>3.5in</Width>
+        <Corner>
+          <ReportItems>
+            <Textbox Name="textbox4">
+              <rd:DefaultName>textbox4</rd:DefaultName>
+              <ZIndex>4</ZIndex>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingBottom>2pt</PaddingBottom>
+                <FontFamily>Tahoma</FontFamily>
+                <BorderColor>
+                  <Default>LightGrey</Default>
+                </BorderColor>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+              </Style>
+              <CanGrow>true</CanGrow>
+              <Value>
+              </Value>
+            </Textbox>
+          </ReportItems>
+        </Corner>
+        <Height>0.63in</Height>
+        <MatrixRows>
+          <MatrixRow>
+            <Height>0.21in</Height>
+            <MatrixCells>
+              <MatrixCell>
+                <ReportItems>
+                  <Textbox Name="textbox3">
+                    <rd:DefaultName>textbox3</rd:DefaultName>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <FontFamily>Tahoma</FontFamily>
+                      <BorderColor>
+                        <Default>LightGrey</Default>
+                      </BorderColor>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>=Sum(Fields!Total_Time.Value)</Value>
+                  </Textbox>
+                </ReportItems>
+              </MatrixCell>
+            </MatrixCells>
+          </MatrixRow>
+        </MatrixRows>
+      </Matrix>
+    </ReportItems>
+    <Height>1.125in</Height>
+  </Body>
+  <rd:ReportID>9ec15cce-ebf0-43a4-aec6-d8dbab4dff02</rd:ReportID>
+  <LeftMargin>0.5in</LeftMargin>
+  <DataSets>
+    <DataSet Name="TimeKeeperDataSource">
+      <Query>
+        <CommandText>SELECT     rpt_TotalSummary.Section_Name, rpt_TotalSummary.DisplayName, rpt_TotalSummary.Entry_Date, rpt_TotalSummary.Total_Time, 
+                      rpt_TotalSummary.WorkDone, rpt_TotalSummary.Category_Name, rpt_TotalSummary.ProjectNumber, rpt_TotalSummary.ProjectName, 
+                      rpt_TotalSummary.PhaseName, rpt_TotalSummary.Effort, rpt_TotalSummary.Asset_Name, rpt_TotalSummary.WONum, 
+                      rpt_TotalSummary.RFCNum
+FROM         rpt_TotalSummary INNER JOIN
+                      Phases ON rpt_TotalSummary.PhaseName = Phases.Name
+WHERE     (rpt_TotalSummary.Entry_Date &gt;= @recent) AND (rpt_TotalSummary.ProjectName IS NOT NULL)
+ORDER BY Phases.PhaseID</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@recent">
+            <Value>=Parameters!recent.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <DataSourceName>TimeKeeperDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="Section_Name">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Section_Name</DataField>
+        </Field>
+        <Field Name="DisplayName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DisplayName</DataField>
+        </Field>
+        <Field Name="Entry_Date">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>Entry_Date</DataField>
+        </Field>
+        <Field Name="Total_Time">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Total_Time</DataField>
+        </Field>
+        <Field Name="WorkDone">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>WorkDone</DataField>
+        </Field>
+        <Field Name="Category_Name">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Category_Name</DataField>
+        </Field>
+        <Field Name="ProjectNumber">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ProjectNumber</DataField>
+        </Field>
+        <Field Name="ProjectName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ProjectName</DataField>
+        </Field>
+        <Field Name="PhaseName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PhaseName</DataField>
+        </Field>
+        <Field Name="Effort">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Effort</DataField>
+        </Field>
+        <Field Name="Asset_Name">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Asset_Name</DataField>
+        </Field>
+        <Field Name="WONum">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>WONum</DataField>
+        </Field>
+        <Field Name="RFCNum">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RFCNum</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>7.5in</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>0.5in</TopMargin>
+</Report>

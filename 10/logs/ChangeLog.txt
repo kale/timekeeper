@@ -1,0 +1,26 @@
+TimeKeeper ChangeLog
+====================
+
+09/01/06
+--------
+* Added "View By Date" calendar on Reports.aspx
+* Fixed variou minor bugs on Reports.aspx
+
+08/25/06
+--------
+* Created Help page
+* Created LoadTime user control and placed in footer
+* Created footer div in Site.master
+
+08/24/06
+--------
+* Created ChangeLog.aspx (this page)
+* Changed Notepad.aspx main page header
+* Changed naming of Notes.aspx to Notepad.aspx
+
+08/23/06
+--------
+* Intial release of beta
+
+
+

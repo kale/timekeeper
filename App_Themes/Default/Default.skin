@@ -1,0 +1,41 @@
+<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+<AlternatingRowStyle BackColor="#FFFFFF" />
+--%>
+
+
+<asp:GridView runat="server" AutoGenerateColumns="False" AllowSorting="true" BorderWidth="0" BorderStyle="None"
+    Width="100%" CellPadding="2" RowStyle-VerticalAlign="Middle">
+    <EmptyDataTemplate>
+        <asp:Label ID="EmptyGridView" runat="server" Text="Empty">No entries currently.</asp:Label>
+    </EmptyDataTemplate>
+    <AlternatingRowStyle CssClass="AltRow" />
+    <RowStyle CssClass="row1" BorderStyle="None" VerticalAlign="top" />
+    <HeaderStyle CssClass="grid-header" HorizontalAlign="Left" />
+    <SelectedRowStyle CssClass="SelectedRowStyle" />
+</asp:GridView>
+
+<asp:Calendar runat="server" SelectionMode="DayWeekMonth" BackColor="White"
+    BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana"
+    Font-Size="8pt" ForeColor="Black" Height="180px" Width="200px" FirstDayOfWeek="Monday">
+    <SelectedDayStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
+    <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
+    <SelectorStyle BackColor="#CCCCCC" />
+    <WeekendDayStyle BackColor="#FFFFCC" />
+    <OtherMonthDayStyle ForeColor="Gray" />
+    <NextPrevStyle VerticalAlign="Bottom" />
+    <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
+    <TitleStyle BackColor="#999999" BorderColor="Black" Font-Bold="True" />
+</asp:Calendar>

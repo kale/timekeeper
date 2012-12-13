@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/timekeeper/!svn/ver/26/App_Code/BLL
+END
+ProjectMembersBLL.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/timekeeper/!svn/ver/23/App_Code/BLL/ProjectMembersBLL.cs
+END
+UsersBLL.cs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/timekeeper/!svn/ver/26/App_Code/BLL/UsersBLL.cs
+END
+AssetsBLL.cs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/timekeeper/!svn/ver/4/App_Code/BLL/AssetsBLL.cs
+END
+PhasesBLL.cs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/timekeeper/!svn/ver/4/App_Code/BLL/PhasesBLL.cs
+END
+ServicesBLL.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/timekeeper/!svn/ver/11/App_Code/BLL/ServicesBLL.cs
+END
+CategoriesBLL.cs
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/timekeeper/!svn/ver/4/App_Code/BLL/CategoriesBLL.cs
+END
+TasksBLL.cs
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/timekeeper/!svn/ver/4/App_Code/BLL/TasksBLL.cs
+END
+SectionsBLL.cs
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/timekeeper/!svn/ver/4/App_Code/BLL/SectionsBLL.cs
+END
+NotesBLL.cs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/timekeeper/!svn/ver/33/App_Code/BLL/NotesBLL.cs
+END
+TodosBLL.cs
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/timekeeper/!svn/ver/4/App_Code/BLL/TodosBLL.cs
+END
+ProjectsBLL.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/timekeeper/!svn/ver/23/App_Code/BLL/ProjectsBLL.cs
+END

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmRkbDI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yIiB4bWxuczpkZGwyXzI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yLzIiIHhtbG5zOmRkbDEwMF8xMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDA4L2VuZ2luZS8xMDAvMTAwIiB4bWxuczpkd2Q9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vRGF0YVdhcmVob3VzZS9EZXNpZ25lci8xLjAiPg0KICA8RW5hYmxlZD5mYWxzZTwvRW5hYmxlZD4NCiAgPFByb2plY3ROYW1lPjwvUHJvamVjdE5hbWU+DQogIDxBdXhQYXRoPjwvQXV4UGF0aD4NCiAgPExvY2FsUGF0aD48L0xvY2FsUGF0aD4NCiAgPFByb3ZpZGVyPjwvUHJvdmlkZXI+DQo8L1NvdXJjZUNvbnRyb2xJbmZvPg==</State>
+  <DataSources>
+    <ProjectItem>
+      <Name>TimeKeeperDataSource.rds</Name>
+      <FullPath>TimeKeeperDataSource.rds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <Reports>
+    <ProjectItem>
+      <Name>Asset Time.rdl</Name>
+      <FullPath>Asset Time.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Bird's Eye View.rdl</Name>
+      <FullPath>Bird's Eye View.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Category Matrix.rdl</Name>
+      <FullPath>Category Matrix.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Category Overview.rdl</Name>
+      <FullPath>Category Overview.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Category Time by Effort.rdl</Name>
+      <FullPath>Category Time by Effort.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Category Time by Employee.rdl</Name>
+      <FullPath>Category Time by Employee.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Data Export.rdl</Name>
+      <FullPath>Data Export.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Employee Baseline.rdl</Name>
+      <FullPath>Employee Baseline.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Employee Last Week View.rdl</Name>
+      <FullPath>Employee Last Week View.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Employee Time Drilldown.rdl</Name>
+      <FullPath>Employee Time Drilldown.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Employee Time.rdl</Name>
+      <FullPath>Employee Time.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Employee Weekly View (int sec).rdl</Name>
+      <FullPath>Employee Weekly View (int sec).rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Employee Weekly View.rdl</Name>
+      <FullPath>Employee Weekly View.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Project Details.rdl</Name>
+      <FullPath>Project Details.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Project Matrix.rdl</Name>
+      <FullPath>Project Matrix.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Project Overview.rdl</Name>
+      <FullPath>Project Overview.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Section Baseline.rdl</Name>
+      <FullPath>Section Baseline.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Section Effort Types.rdl</Name>
+      <FullPath>Section Effort Types.rdl</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Data Export (Projects Only).rdl</Name>
+      <FullPath>Data Export (Projects Only).rdl</FullPath>
+    </ProjectItem>
+  </Reports>
+  <Configurations>
+    <Configuration>
+      <Name>Debug</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <TargetServerURL>http://reportserver</TargetServerURL>
+        <TargetFolder>TimeKeeper</TargetFolder>
+        <TargetDataSourceFolder>TimeKeeper</TargetDataSourceFolder>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>DebugLocal</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <TargetFolder>TimeKeeper Report Project</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+      </Options>
+    </Configuration>
+    <Configuration>
+      <Name>Production</Name>
+      <Platform>Win32</Platform>
+      <Options>
+        <TargetFolder>TimeKeeper Report Project</TargetFolder>
+        <TargetDataSourceFolder>Data Sources</TargetDataSourceFolder>
+      </Options>
+    </Configuration>
+  </Configurations>
+</Project>

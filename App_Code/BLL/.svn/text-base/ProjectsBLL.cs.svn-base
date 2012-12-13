@@ -1,0 +1,128 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using TimeKeeperTableAdapters;
+
+[System.ComponentModel.DataObject]
+public class ProjectsBLL
+{
+    private ProjectsTableAdapter _projectsAdaptor = null;
+
+    protected ProjectsTableAdapter Adaptor
+    {
+        get
+        {
+            if (_projectsAdaptor == null)
+                _projectsAdaptor = new ProjectsTableAdapter();
+
+            return _projectsAdaptor;
+        }
+    }
+
+    [System.ComponentModel.DataObjectMethodAttribute(System.ComponentModel.DataObjectMethodType.Select, true)]
+    public TimeKeeper.ProjectsDataTable GetProjects()
+    {
+        return Adaptor.GetProjects();
+    }
+
+    [System.ComponentModel.DataObjectMethodAttribute(System.ComponentModel.DataObjectMethodType.Select, false)]
+    public TimeKeeper.ProjectsDataTable GetProjectsByUserID(int userID)
+    {
+		return Adaptor.GetProjectsByUserID(userID);
+    }
+
+    [System.ComponentModel.DataObjectMethodAttribute(System.ComponentModel.DataObjectMethodType.Select, false)]
+    public TimeKeeper.ProjectsDataTable GetProjectByProjectID(int projectID)
+    {
+		return Adaptor.GetProjectByProjectID(projectID);
+    }
+
+    [System.ComponentModel.DataObjectMethodAttribute(System.ComponentModel.DataObjectMethodType.Insert, true)]
+    public bool AddProject(int projectID, string projectNumber, string name, string teamsiteURL, bool active, int phaseID)
+    {
+        //Create a new ProjectRow instance
+        TimeKeeper.ProjectsDataTable projects = new TimeKeeper.ProjectsDataTable();
+        TimeKeeper.ProjectsRow project = projects.NewProjectsRow();
+
+		project.ProjectID = projectID;
+		project.ProjectNumber = projectNumber;
+        project.Name = name;
+        project.TeamSiteURL = teamsiteURL;
+        project.Active = active;
+		project.PhaseID = phaseID;
+
+        //Add the new project
+        projects.AddProjectsRow(project);
+        int rowsAffected = Adaptor.Update(projects);
+
+        //Return true if precisely one row was inserted, otherwise false
+        return rowsAffected == 1;
+    }
+
+    [System.ComponentModel.DataObjectMethodAttribute(System.ComponentModel.DataObjectMethodType.Insert, false)]
+    public bool AddProject(int projectID, string projectNumber, string name, bool active, int phaseID)
+    {
+        //Create a new ProjectRow instance
+        TimeKeeper.ProjectsDataTable projects = new TimeKeeper.ProjectsDataTable();
+        TimeKeeper.ProjectsRow project = projects.NewProjectsRow();
+
+		project.ProjectID = projectID;
+		project.ProjectNumber = projectNumber;
+        project.Name = name;
+		project.Active = active;
+		project.PhaseID = phaseID;
+
+        //set these parameters to the default
+        project.TeamSiteURL = null;
+
+        //Add the new project
+        projects.AddProjectsRow(project);
+        int rowsAffected = Adaptor.Update(projects);
+
+        //Return true if precisely one row was inserted, otherwise false
+        return rowsAffected == 1;
+    }
+
+    [System.ComponentModel.DataObjectMethodAttribute(System.ComponentModel.DataObjectMethodType.Update, true)]
+    public bool UpdateProject(int projectID, string projectNumber, string name, string teamsiteURL, bool active, int phaseID)
+    {
+        TimeKeeper.ProjectsDataTable projects = Adaptor.GetProjectByProjectID(projectID);
+		
+        if (projects.Count == 0)
+            return false;
+
+        TimeKeeper.ProjectsRow project = projects[0];
+
+		project.ProjectNumber = projectNumber;
+        project.Name = name;
+        project.TeamSiteURL = teamsiteURL;
+		project.Active = active;
+		project.PhaseID = phaseID;
+
+        //Update project
+        int rowsAffected = Adaptor.Update(project);
+
+        //Return true if precisely one row was updated, otherwise false
+        return rowsAffected == 1;
+    }
+
+    [System.ComponentModel.DataObjectMethodAttribute(System.ComponentModel.DataObjectMethodType.Delete, true)]
+    public bool DeleteProject(int projectID)
+    {
+        int rowsAffected = Adaptor.Delete(projectID);
+
+        //Return true if precisely one row was inserted, otherwise false
+        return rowsAffected == 1;
+    }
+
+    public int ProjectIDExists(int projectID)
+    {
+		return Convert.ToInt32(Adaptor.ProjectIDExists(projectID));
+    }
+}

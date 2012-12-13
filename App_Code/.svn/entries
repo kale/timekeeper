@@ -1,0 +1,70 @@
+8
+
+dir
+32
+http://smartduck.com/timekeeper/App_Code
+http://smartduck.com/timekeeper
+
+
+
+2007-01-09T17:07:19.137041Z
+27
+kale
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+d4858f85-0822-0410-bf55-af3c7420b753
+
+ClassDiagram.cd
+file
+
+
+
+
+2007-11-28T15:05:21.417869Z
+7215ee9c7d9dc229d2921a40e899ec5f
+2006-12-25T08:17:14.241393Z
+4
+kale
+
+DAL
+dir
+
+WebApp.cs
+file
+
+
+
+
+2007-11-28T15:05:21.417869Z
+df2173be66a5d93a87d7dd319c0155fe
+2006-12-25T08:17:14.241393Z
+4
+kale
+
+Task.cs
+file
+
+
+
+
+2007-11-28T15:05:21.437898Z
+310ad1b754b8a63cfed6ad43bf5fc38f
+2007-01-09T17:07:19.137041Z
+27
+kale
+
+BLL
+dir
+

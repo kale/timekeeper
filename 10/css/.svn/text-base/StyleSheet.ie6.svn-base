@@ -1,0 +1,539 @@
+body
+{
+    margin: 0px;
+    background: #FFFFFF url(../images/background_main.gif) repeat-x left top;
+    font: 0.7em Verdana,Arial,Helvetica,sans-serif;
+}
+#login a:link, #login a:visited
+{
+    color: #FFFFFF;
+}
+#title h2 a:link, #title h2 a:visited
+{
+    color: #555555;
+    text-decoration: none;
+}
+#reportresults h2
+{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+a:link
+{
+    color: #396EAA;
+    text-decoration: none;
+}
+a:visited
+{
+    color: #396EAA;
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+a:active
+{
+    text-decoration: none;
+}
+/*begin creating the tabs */
+.menu
+{
+    margin-left: 28px;
+    font-size: 11px;
+    font-weight: bold;
+}
+.submenu
+{
+    height: 5px;
+}
+.menu a:link
+{
+    color: #285069;
+    text-decoration: none;
+}
+.menu a:visited
+{
+    color: #285069;
+    text-decoration: none;
+}
+.menu a:hover
+{
+    color: #285069;
+    text-decoration: underline;
+}
+
+#informationbar
+{
+    background: lightyellow;
+    border: 1px solid #C0C0C0;
+    padding: 5px;
+}
+
+#informationbar a:link, #informationbar a:visited
+{
+    text-decoration: underline;
+}
+
+#informationbar a:hover
+{
+    color: Red;
+}
+
+#timebar
+{
+    margin-top: -7px;
+}
+
+/* define the main layout divs */
+#header
+{
+    margin-right: auto;
+    height: 60px;
+    width: 100%;
+}
+#title
+{
+    padding-top: 5px;
+    padding-bottom: 0px;
+    padding-left: 47px;
+    float: left;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#login
+{
+    padding-top: 25px;
+    padding-right: 28px;
+    float: right;
+    clear: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 10px;
+    height: 28px;
+    top: 0px;
+    text-align: right;
+}
+/* make crumbs after making new nav */
+#breadcrumb
+{
+    padding-top: 4px;
+    padding-left: 10px;
+    background: #919191;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: bold;
+    height: 20px;
+}
+#body
+{
+    padding: 0px 8px 25px 8px;
+    background: #FFFFFF url(../images/background_body.gif) repeat-x left top;
+}
+/* IE needs height:512px BUT this height:512px below must be removed to display correctly in Mozilla */
+#reportresults, #projectadministration, #adminedit, #gridview, #dataentry, #projectreport, #resourcereport
+{
+    height: 512px;
+}
+/* Mozilla needs min-height:512px (IE will ignore this min-height) */
+#reportresults, #projectadministration, #adminedit, #gridview, #dataentry, #projectreport, #resourcereport
+{
+    min-height: 512px;
+}
+#dataentry
+{
+    padding: 10px;
+    margin-right: 15px;
+    border: 1px solid #000000;
+    float: left;
+    background: #aec7da url(../images/background_addhours.gif) repeat-x left top;
+    color: #666666;
+    font-family: Tahoma,Verdana,Helvetica,Helvetica-Narrow,sans-serif;
+    width: 195px;
+    position: relative;
+}
+#reportresults, #projectadministration, #adminedit, #projectreport, #resourcereport
+{
+    padding: 10px;
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    color: #666666;
+    font-family: Tahoma,Verdana,Helvetica,Helvetica-Narrow,sans-serif;
+}
+#gridview
+{
+    padding: 10px;
+    border: 1px solid #000000;
+    margin-left: 218px;
+    background: #FFFFFF;
+    color: #666666;
+    font-family: Tahoma,Verdana,Helvetica,Helvetica-Narrow,sans-serif;
+}
+#fullview
+{
+    padding: 10px;
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    color: #666666;
+    font-family: Tahoma,Verdana,Helvetica,Helvetica-Narrow,sans-serif;
+}
+#gridviewdata, #projecttable
+{
+    width: 100%;
+    text-align: center;
+}
+#catlist
+{
+    width: 20%;
+}
+/* define other elements inside the main layout divs */
+#title h1
+{
+    display: inline;
+    color: #025594;
+    font-size: 18px;
+    font-weight: bold;
+}
+#title h2
+{
+    display: inline;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+}
+/* can be removed if no images in breadcrumb area */
+#breadcrumb img
+{
+    border: none;
+    padding-right: 3px;
+    vertical-align: middle;
+}
+/* all the legend tags use this same style */
+legend
+{
+    padding: 0px 4px;
+    margin: 0px 0px 7px 0px;
+    color: #666666;
+    font-weight: bold;
+    font-size: 1em;
+    vertical-align: middle;
+}
+/* define sizes of the username field */
+.username
+{
+    font-size: .9em;
+    width: 200px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.username a:link, .username a:visited
+{
+    font-size: 0.9em;
+    color: #494949;
+}
+
+/* all the fieldset tags use this same style */
+fieldset
+{
+    margin-bottom: 0px;
+    padding: 0px 12px 12px 12px;
+    display: block;
+}
+/* create hover effect for calendar icons */
+#dataentry a:link img, #dataentry a:visited img, #resourcereport a:link img, #resourcereport a:visited img
+{
+    padding: 2px;
+    border: 1px solid #DFE4EA;
+    background: #DFE4EA;
+}
+/* Put the admin edit calendar icon on a white background */
+#adminedit a:link img, #adminedit a:visited img
+{
+    padding: 2px;
+    border: 1px solid #FFFFFF;
+    background: #FFFFFF;
+}
+#dataentry a:hover img, #resourcereport a:hover img, #adminedit a:hover img
+{
+    padding: 2px;
+    border: 1px solid #C1CFE0;
+    background: #E8ECF0;
+}
+#dataentry a:active img, #resourcereport a:active img, #adminedit a:active img
+{
+    padding: 2px;
+    border: 1px solid #C1CFE0;
+    background: #C9D4E2;
+}
+/* add fade background and padding to all table rows */
+.row1
+{
+    padding: 3px;
+    border-top: 1px solid black;
+    /* background: url(../images/gridview_data_bg.gif) repeat-x; */
+}
+.row1 img
+{
+    border: none;
+    text-align: center;
+}
+.AltRow 
+{
+    border-top: 1px solid black;
+}
+/* add hover effect to any a href images within the data tables */
+#gridviewdata a:link img, #gridviewdata a:visited img, #projecttable a:link img, #projecttable a:visited img
+{
+    padding: 2px;
+    border: 1px solid #EDF0F3;
+    background: #EDF0F3;
+}
+#gridviewdata a:hover img, #projecttable a:hover img
+{
+    padding: 2px;
+    border: 1px solid #C1CFE0;
+    background: #FBFBFC;
+}
+#gridviewdata a:active img, #projecttable a:active img
+{
+    padding: 2px;
+    border: 1px solid #C1CFE0;
+    background: #D9E2EC;
+}
+/* zero margin on all forms */
+form
+{
+    margin: 0px;
+}
+/* define the pop up calendar style */
+#calbg
+{
+    background: #ABBDD3 url(../images/background_calendar.gif) repeat-x;
+    height: 1000px;
+}
+#calcontent
+{
+    margin: 5px;
+    padding: 5px 4px 9px 4px;
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    font-size: 10px;
+    text-align: center;
+}
+#month
+{
+    margin-bottom: 6px;
+    font-size: 9px;
+    width: 80px;
+}
+#year
+{
+    margin-bottom: 6px;
+    font-size: 9px;
+    width: 50px;
+}
+#calcontent table td a:link, #calcontent table td a:visited
+{
+    padding: 0px 2px 3px;
+    display: block;
+}
+#calcontent table td a:hover, #calcontent table td a:active
+{
+    display: block;
+    background: #FFCC00;
+}
+#calcontent table td a:active
+{
+    display: block;
+    color: #FFFFFF;
+    background: #009900;
+}
+/* begin classes */
+input, select, textarea
+{
+    margin-bottom: 8px;
+}
+/* make the cal icon appear in line with the forms and text */
+#dataentry img, #resourcereport img, #adminedit img
+{
+    border: 0px;
+    vertical-align: text-bottom;
+}
+/* make hours input field more prominent */
+#dataentry .hours
+{
+    padding-top: 1px;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 35px;
+    height: 20px;
+    text-align: center;
+}
+.projectlist, .resourcelist
+{
+    border: 1px solid #00FF00;
+    margin-bottom: 4px;
+    width: 200px;
+}
+/* condense in mark up to be '.button' */
+.submit, .reset, .delete, .create, .add, .copy
+{
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 0.9em;
+    height: 28px;
+}
+/* make submit button larger */
+.submit
+{
+    width: 108px;
+}
+/* define the look of the data tables (using colgroup in the source) 
+colcatlist1 and colcatlist1 are generic names since I'm not sure 
+what kind of date goes into these cells. More appropriate names can
+be added for these */
+.coldescription, .colcatlist1, .colcatlist2
+{
+    text-align: left;
+}
+.colday, .colhours, .coledit, .coldelete
+{
+    width: 5%;
+}
+.colproject, .colcategory
+{
+    width: 15%;
+}
+.colhours
+{
+    font-weight: bold;
+}
+.coldescription
+{
+    width: 50%;
+}
+/* define pop up calendar look */
+.calmonday, .caltuesday, .calwednesday, .calthursday, .calfriday, .calsaturday, .calsunday
+{
+    text-align: center;
+}
+.calcurrentmonth
+{
+    background: #EEEEEE;
+}
+.calcurrentday
+{
+    border: 1px solid #000000;
+}
+.calothermonth a:link, .calothermonth a:visited
+{
+    color: #999999;
+}
+.calweekend
+{
+    background: #E2E2E2;
+}
+/* create section heading container to separate long forms */
+.formsection
+{
+    padding: 10px;
+    margin-top: 15px;
+    background: #D6DDE9 url(../images/background_formsection.gif) repeat-x center;
+    font-weight: bold;
+    text-align: center;
+}
+/* sometimes we hide elements from display in visual browsers (but leave them in the source for non visual browsers and for accessibility). I've also hidden the table in the admin_create_projects.html page */
+.hidden
+{
+    visibility: hidden;
+}
+.none
+{
+    display: none;
+}
+
+img
+{
+    border: none;
+}
+
+.simplelist ul
+{
+    list-style: none;
+    margin-left: 1em;
+    padding-left: 1em;
+    text-indent: -1em;
+    margin-top: 0px;
+}
+
+.ActiveProject
+{
+    border: 2px solid black;
+    background: #90ee90;
+}
+
+.SelectedRowStyle
+{
+    background-color: #90ee90;
+}
+
+.DetailView
+{
+    border: 1px solid black;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+.DetailViewCommands
+{
+    position: relative;
+    top: 21px;
+}
+
+.DetailViewCommands a:link, .DetailViewCommands a:visited
+{
+    background: #ffffff;
+    color: Black;
+    padding: 2px;
+    margin: 2px;
+    border: 1px solid black;
+}
+
+.DetailViewCommands a:hover 
+{
+    background: #000000;
+    color: #ffffff;
+}
+
+#beta {
+    background: url("../images/beta.gif");
+    height: 50px;
+    width: 50px;
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+
+#footer
+{
+    background: #eaecee;
+    border: 1px solid #C0C0C0;
+    padding: 5px;
+    margin: 8px;
+    text-align: right;
+    font-size: 0.8em;
+}
+
+#fullview
+{
+    height: 512px;
+    padding: 10px;
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    color: #666666;
+    font-family: Tahoma,Verdana,Helvetica,Helvetica-Narrow,sans-serif;
+}

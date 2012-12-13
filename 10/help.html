@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>TimeKeeper Help</title>
+	<link rel="stylesheet" type="text/css" href="css/StyleSheet.css" />
+
+	<style>
+		body {
+			background-image: none;
+		}
+		table tr {
+			vertical-align: top;
+			padding: 5px;
+		}
+		table td {
+			width: 300px;
+			padding-right: 30px;
+		}
+		.CategoryName {
+			width: 150px;
+			font-weight: bold;
+		}
+		.CategoryHeader {
+			background: lightyellow;
+			text-decoration: underline;
+		}
+		img {
+			border: 1px solid silver;
+		}
+
+		h3 {
+			margin-bottom: 5px;
+		}
+
+		p {
+			margin: 0, 0, 10px, 25px;
+		}
+
+
+		#field {
+			width: 75%;
+			border: 1px solid #dddddd;
+			margin: 10px;
+			padding: 5px;
+		}
+
+		#field h6 {
+			font-size: 1em;
+			margin-bottom: 5px;
+			background: silver;
+			width: 100%;
+			padding-left: 2px;
+		}
+
+		#field ul {
+			margin: 0, 0, 0, 25px;
+			list-style: square;
+		}
+
+		#field a:link, #field a:visited
+		{
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 0.9em;
+			color: blue;
+		}
+
+		#field a:hover
+		{
+			color: red;
+		}
+		.HelpSection {
+			margin-left: 30px;
+			width: 90%;
+		}
+	</style>
+</head>
+<body id="help">
+	<h4>Task Entry</h4>
+	<div class="HelpSection">
+		<h5>Overview</h5>
+		<p>To enter a task you use the main task entry form.  There is several required fields like Date, Time, Work Done, and Category.  Depending on the category choosen, other fields might be required as well.  The form uses validation to make sure you enter everything correctly, but please be sure to follow your manager's instructions on how best to fill out each option with a particular task.</p>
+
+		<h5>Field Details:</h5>
+		<div id="field">
+			<h6>Date</h6>
+
+			<p>Today's date will automatically be populated in this field, but you can also enter any date or use the date picker to select another date.</p>
+
+			<p><img src="images/date.png" alt="Date" title="" /></p>
+		</div>
+
+		<div id="field">
+			<h6>Time</h6>
+
+			<p>Enter the time spent on the task in quarter hour increments.</p>
+
+			<p>Some Examples:
+
+				<ul>
+				<li>Worked 15 minutes, enter .25</li>
+				<li>Worked a hour and hour, enter 1.5</li>
+				<li>Worked two hours and 45 minutes, enter 2.75</li>
+				</ul>
+			</p>
+
+			<p><img src="images/time.png" alt="Time" title="" /></p>
+		</div>
+
+		<div id="field">
+			<h6>Work Done</h6>
+
+			<p>Enter a brief description of what work was done.</p>
+
+			<p><img src="images/workdone.png" alt="Work Done" title="" /></p>
+		</div>
+
+		<div id="field">
+			<h6>Category</h6>
+
+			<p>Select the appropriate category that best fits your task.  The default is "Project", use this for any project work.</p>
+
+			<p><img src="images/category.png" alt="Time" title="" /></p>
+
+			<table>
+				<tr class="CategoryHeader">
+					<td>Category Name</td>
+					<td>Description</td>
+					<td>Example</td>
+				</tr>
+				<tr>
+					<td class="CategoryName">Project</td>
+					<td>Time spent working on a project or new solution request.  Projects are have assigned project managers and are defined in the PM policy.</td>
+					<td>Setup of a new site on the network.  The deployment of Office 2007.</td>
+				</tr>
+				<tr>
+					<td class="CategoryName">Administration</td>
+					<td>General Duties that do not fall in the other categories.</td>
+					<td>Attending a staff meeting. Timekeeping. Answering email.</td>
+				</tr>
+				<tr>
+					<td class="CategoryName">Break/Fix</td>
+					<td>Fixing a hardware or software problem.  This category is used most often by the helpdesk, but it can be used by other team members.</td>
+					<td>Fixing a printing problem. Resetting an account that is locked out.</td>
+				</tr>
+				<tr>
+					<td class="CategoryName">IMACD</td>
+					<td>An installation, moves, adds, changes, and deletes.</td>
+					<td>Adding a new computer to the network.  Changing a user account.  Removing a computer from the network.  Installing a new application on a computer.  Moving equipment to a new location.</td>
+				</tr>
+				<tr>
+					<td class="CategoryName">Maintenance</td>
+					<td>Activity involved in maintaining something in good working order.</td>
+					<td>Applying patches to a program or OS. Checking system logs. </td>
+				</tr>
+				<tr>
+					<td class="CategoryName">Programs</td>
+					<td>Sponsored continuous activities that include planning, monitoring, and reporting of ongoing activities to produce a product or products.</td>
+					<td>Records Management</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="field">
+			<h6>Project</h6>
+
+			<p>If you select the <em>Project</em> category you must pick a project.  Other category selections will either prevent you from picking a project (like Administration) or make it optional (like Maintenance).</p>
+
+			<p><img src="images/project.png" alt="Time" title="" /></p>
+		</div>
+
+		<div id="field">
+			<h6>Phase</h6>
+
+			<p>If you select a Project you must also select a phase.  This field will auto pick a phase according to the PMO Project Board, so in most cases you won't have to select a phase.  However, if the Project Board is not correct or if you are working a different phase then you would need to select the correct one.</p>
+
+			<p><img src="images/phase.png" alt="Phase" title="" /></p>
+		</div>
+
+		<div id="field">
+			<h6>Effort Type</h6>
+
+			<p>Select the appropriate effort type that best fits your task.  You can find more information about the various effort types on the <a href="EffortType.aspx">Effort Type</a> page.  Please note on that page that you will find <em>core</em> effort types highlighted in <strong>bold</strong> text that are common between all sections.  The rest are unique to your section.</p>
+
+			<p><img src="images/effort_type.png" alt="Effort Type" title="" /></p>
+		</div>
+
+		<div id="field">
+			<h6>Asset Type</h6>
+
+			<p><img src="images/asset.png" alt="Asset" title="" /></p>
+		</div>
+
+		<div id="field">
+			<h6>WO</h6>
+
+			<p>Optional field to record the work order number from our Track-It! application.</p>
+
+			<p><img src="images/wo.png" alt="WO" title="" /></p>
+		</div>
+
+		<div id="field">
+			<h6><a name="rfc">RFC</a></h6>
+
+			<p>Optional field to record the request for change number.</p>
+
+			<p><img src="images/rfc.png" alt="RFC" title="" /></p>
+		</div>
+	</div>
+</body>
+</html>
